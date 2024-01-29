@@ -1,6 +1,6 @@
 getgenv().config = {
     autoFishing = true, -- true / false 
-    placetoFish = "Fishing", -- "Fishing" // "AdvancedFishing"
+    placetoFish = "AdvancedFishing", -- "Fishing" // "AdvancedFishing"
     invisWater = true, -- make area's water transparent
     
     userToMail = "zBossPT", -- your main's username to mail all Magic Shards to
@@ -16,4 +16,5 @@ getgenv().config = {
     -- sendWebhooks = false, -- waiting for executor that supports http
     -- webhookUrl = ""
 }
+task.wait(10)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2ba71da818277b618eace56f899d9d3e.lua"))()
