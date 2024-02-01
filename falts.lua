@@ -1,4 +1,3 @@
-task.wait(10)
 -- v1 with Presents
 _G.Enabled = true -- true / false for auto
 _G.Area = "AdvancedFishing" -- "Fishing" / "AdvancedFishing"
