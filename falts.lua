@@ -28,5 +28,5 @@ getgenv().config = {
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e7295942a8e53136487f943515e8fd8b.lua"))()
 
-setfpscap(5)
+setfpscap(2)
 --game:GetService("RunService"):Set3dRenderingEnabled(false)
