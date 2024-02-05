@@ -4,29 +4,25 @@
 
 --loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ed804add7997f188535ed07840c724da.lua"))()
 
-getgenv().config = {                 
-    autoFishing = true,              -- farm off execution or not
-    placetoFish = "AdvancedFishing", -- "Fishing" // "AdvancedFishing"
-    invisWater = true,                  -- make water transparent
-    autoPresents = true,              -- auto collect presents
-
-    autoMail = false,                  -- true // false
-    autoMailUsers = {                 
-        "Username1",                 -- Usernames to auto mail
-        "Username2",                 -- can add as many as you want
+getgenv().config = {
+    placetoFish = "AdvancedFishing", -- place to fish "Fishing" or "AdvancedFishing"
+    autoFishing = true, -- fish off execution or not
+    autoPresents = true, -- collect presents
+    updateStats = true, -- update personal stats
+    invisWater = true, --invisible water :-)
+    renderer = false,
+    
+    mailUsers = {
+        "Username1", -- change to your usernames for mailing
+        "Username2", -- YOU CAN PUT AS MANY ACCOUNTS AS YOU WANT
+        "Username3",
     },
-    autoMailItem = "",                 -- "Magic Shards" // "Huge Poseidon Corgi"
-    autoMailAmount = 0,              -- amount to auto mail (for shards)
-    autoMailTimer = 300,              -- custom timer (seconds)
-
-    manualMailUsers = {
-        "Username1",                 -- Usernames to manual mail
-        "Username2",                 -- can add as many as you want
-    },
-    manualMailItem = "",             -- "Magic Shards" // "Huge Poseidon Corgi"
-    manualMailAmount = 0,              -- amount to manually mail
+    mailSetting = "Magic Shard", -- can be "Huge Poseidon Corgi", "Diamonds", "Magic Shard", "Charm Stone"
+    mailAmount = 1, -- amount to mail, less than 1000.  For GEMS it will send all except 100k
+    mailTimer = 900000000, -- how often you want to send mail if you use automatic
+    mailAuto = false, -- true/false
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e7295942a8e53136487f943515e8fd8b.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2a7ace7d651c472352ea0589cc6c570e.lua"))()
 
 setfpscap(3)
 --game:GetService("RunService"):Set3dRenderingEnabled(false)
