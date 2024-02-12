@@ -24,3 +24,4 @@ while _G.autoFuse do
     game:GetService("ReplicatedStorage").Network.FuseMachine_Activate:InvokeServer(unpack(args))
     task.wait(0.5)
 end
+--asd
