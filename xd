@@ -1,4 +1,6 @@
-_G.autoBalloon = false
+_G.autoBalloon = true
+
+loadstring(game:HttpGet("https://pastebin.com/raw/HyUbVXrW"))()
 
 local START_DELAY = 2 -- delay before starting
 local SERVER_HOP = true -- server hop after popping balloons
