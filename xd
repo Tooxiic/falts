@@ -1,4 +1,4 @@
-_G.autoBalloon = true
+_G.autoBalloon = false
 
 local START_DELAY = 2 -- delay before starting
 local SERVER_HOP = true -- server hop after popping balloons
