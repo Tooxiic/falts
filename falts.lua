@@ -18,5 +18,5 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2c340ba7f63eb2
 
 wait(10)
 
-setfpscap(3)
+setfpscap(5)
 game:GetService("RunService"):Set3dRenderingEnabled(false)
