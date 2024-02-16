@@ -1,27 +1,22 @@
-_G.autoFuse = true
-local PET_TO_FUSE = "Pastel Griffin" -- name of the pet you want to fuse
-local FUSE_AMOUNT = 3 -- 3 in the minimum and 10 is the max
+getgenv().config = {
+    autoFish = true,
+    placetoFish = "AdvancedFishing",
+    autoPresents = true,
+    invisWater = true,
 
+    userToMail = "zBossPT",
+    autoMail = true,
+    sendHuges = true,
+    sendShards = true,
 
-local Library = require(game.ReplicatedStorage:WaitForChild('Library'))
-local pets = Library.Save.Get().Inventory.Pet
+    sendDiamonds = true,
+    minShards = 500,
+    minDiamonds = 10000000,
+    keepDiamonds = 100000,
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2c340ba7f63eb21c2e772c76d8d077be.lua"))()
 
-local petId
-for id, petData in pairs(pets) do
-    if petData["id"] == PET_TO_FUSE and not petData["pt"] and not petData["sh"] then
-        petId = id
-        print(petId)
-    end
-end
+wait(10)
 
-while _G.autoFuse do
-    local args = {
-        [1] = {
-            [petId] = FUSE_AMOUNT
-        }
-    }
-
-    game:GetService("ReplicatedStorage").Network.FuseMachine_Activate:InvokeServer(unpack(args))
-    task.wait(0.5)
-end
---asd
+setfpscap(3)
+game:GetService("RunService"):Set3dRenderingEnabled(false)
