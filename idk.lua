@@ -1,4 +1,6 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/HyUbVXrW"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/Qu1Zd7NG"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tooxiic/falts/main/antistaff.lua"))()
 
 getgenv().START_DELAY = 1 -- delay before starting
 getgenv().SWITCH_DELAY = 2 -- delay before switching to autoChest
