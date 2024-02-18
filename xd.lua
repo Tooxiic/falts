@@ -1,17 +1,14 @@
 _G.autoBalloon = true
 
-loadstring(game:HttpGet("https://pastebin.com/raw/HyUbVXrW"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/Qu1Zd7NG"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tooxiic/falts/main/antistaff.lua"))()
 
 local START_DELAY = 2 -- delay before starting
 local SERVER_HOP = true -- server hop after popping balloons
 local SERVER_HOP_DELAY = 1 -- delay before server hopping
 local BALLOON_DELAY = 2 -- delay before popping next balloon (if there are multiple balloons in the server)
 local GET_BALLOON_DELAY = 5 -- delay before getting balloons again if none are detected
-
-
-
-
-
 
 task.wait(START_DELAY)
 
