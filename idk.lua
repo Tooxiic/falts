@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/Qu1Zd7NG"))()
+--loadstring(game:HttpGet("https://pastebin.com/raw/Qu1Zd7NG"))()
 
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/Tooxiic/falts/main/antistaff.lua"))()
 
