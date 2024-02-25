@@ -4,17 +4,24 @@ getgenv().config = {
     autoFish = true,
     placetoFish = "AdvancedFishing",
     autoPresents = true,
-    invisWater = true,
-
-    userToMail = "zBossPT",
-    autoMail = true,
+    --[[
+    autoClaimMail = true,
+    userToMail = "",
+    autoMail = false,
     sendHuges = true,
     sendShards = true,
 
     sendDiamonds = true,
-    minShards = 500,
-    minDiamonds = 10000000,
-    keepDiamonds = 100000,
+    minShards = 100,
+    minDiamonds = 1050000,
+    keepDiamonds = 50000,
+    ]]
+    setDelay = false,
+    numDelay = 10, 
+
+    randomDelay = true,
+    minNum = 1,
+    maxNum = 5,
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2c340ba7f63eb21c2e772c76d8d077be.lua"))()
 
