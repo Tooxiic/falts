@@ -4,7 +4,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Library = ReplicatedStorage:WaitForChild("Library")
 local Client = Library:WaitForChild("Client")
 local LocalPlayer = game:GetService("Players").LocalPlayer
-local sfUrl = "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=%s&limit=%s&excludeFullGames=true" 
+--local sfUrl = "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=%s&limit=%s&excludeFullGames=true" 
+local sfUrl = "https://games.roblox.com/v1/games/%s/servers/Public?excludeFullGames=true" 
 local req = request({ Url = string.format(sfUrl, 8737899170, "Desc", 50) }) 
 local body = game:GetService("HttpService"):JSONDecode(req.Body) 
 local deep = math.random(1, 3)
