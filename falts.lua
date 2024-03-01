@@ -2,8 +2,8 @@ getgenv().AuthKey = "HUGE_jBFvQnaZ3P5s"
 getgenv().LoadSettings = {
     Example_Setting = Example_Value
 }
---loadstring(game:HttpGet("https://hugegames.io/ps99"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tooxiic/falts/main/autorejoiner.lua"))()
+loadstring(game:HttpGet("https://hugegames.io/ps99"))()
+wait(1)
 getgenv().autoChest = true
 
 getgenv().autoChestConfig = {
