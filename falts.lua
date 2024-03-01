@@ -1,31 +1,15 @@
-wait(5)
+loadstring(game:HttpGet("https://pastebin.com/raw/HyUbVXrW"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/0hcmGtay"))()
 
-getgenv().config = {
-    autoFish = true,
-    placetoFish = "AdvancedFishing",
-    autoPresents = true,
-    --[[
-    autoClaimMail = true,
-    userToMail = "",
-    autoMail = false,
-    sendHuges = true,
-    sendShards = true,
+getgenv().autoChest = true
 
-    sendDiamonds = true,
-    minShards = 100,
-    minDiamonds = 1050000,
-    keepDiamonds = 50000,
-    ]]
-    setDelay = false,
-    numDelay = 10, 
-
-    randomDelay = true,
-    minNum = 1,
-    maxNum = 5,
+getgenv().autoChestConfig = {
+    START_DELAY = 1, -- delay before starting
+    SEND_PETS = true, -- send pets to break chests (if false, it shouldn't interfere with autofarm)
+    SERVER_HOP = true, -- server hop after breaking all chests
+    SERVER_HOP_DELAY = 1, -- delay in seconds before server hopping (set to 0 for no delay)
+    CHEST_BREAK_DELAY = 2, -- delay before breaking next chest
+    TIMER_SEARCH_DELAY = 0 -- if you are crashing or lagging, increase this value, otherwise leave it as is
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2c340ba7f63eb21c2e772c76d8d077be.lua"))()
 
-wait(10)
-
-setfpscap(15)
---game:GetService("RunService"):Set3dRenderingEnabled(false)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fdvll/pet-simulator-99/main/autoChest.lua"))()
