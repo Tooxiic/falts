@@ -256,6 +256,39 @@ while getgenv().autoChest do
         print("Server hopping in " .. getgenv().autoChestConfig.SERVER_HOP_DELAY .. " seconds")
         task.wait(getgenv().autoChestConfig.SERVER_HOP_DELAY)
 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/fdvll/pet-simulator-99/main/serverhop.lua"))()
+        local Workspace = game:GetService("Workspace")
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        local Library = ReplicatedStorage:WaitForChild("Library")
+        local Client = Library:WaitForChild("Client")
+        local LocalPlayer = game:GetService("Players").LocalPlayer
+        --local sfUrl = "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=%s&limit=%s&excludeFullGames=true" 
+        local sfUrl = "https://games.roblox.com/v1/games/%s/servers/Public?excludeFullGames=true" 
+        local req = request({ Url = string.format(sfUrl, 8737899170, "Desc", 50) }) 
+        local body = game:GetService("HttpService"):JSONDecode(req.Body) 
+        local deep = math.random(1, 3)
+        if deep > 1 then
+            for i = 1, deep, 1 do
+                req = request({ Url = string.format(sfUrl .. "&cursor=" .. body.nextPageCursor, 8737899170, "Desc", 50) }) 
+                body = game:GetService("HttpService"):JSONDecode(req.Body) 
+                task.wait(0.1)
+            end
+        end
+        local servers = {} 
+        if body and body.data then
+            for i, v in next, body.data do
+                if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= game.JobId then
+                    table.insert(servers, 1, v.id)
+                end
+            end
+        end
+        local randomCount = #servers
+        if not randomCount then
+            randomCount = 2
+        end
+        while true do
+            game:GetService("TeleportService"):TeleportToPlaceInstance(8737899170, servers[math.random(1, randomCount)], LocalPlayer)
+            task.wait(0.5)
+            game:GetService("TeleportService"):Teleport(8737899170, LocalPlayer)
+        end
     end
 end
