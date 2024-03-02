@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fdvll/pet-simulator-99/main/waitForGameLoad.lua"))()
 getgenv().AuthKey = "HUGE_jBFvQnaZ3P5s"
 getgenv().LoadSettings = {
     Example_Setting = Example_Value
